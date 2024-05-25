@@ -1,0 +1,108 @@
+/* styles.css */
+body {
+    font-family: 'Orbitron', sans-serif; /* Футуристический шрифт */
+    background-color: #121212;
+    color: #E0E0E0;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    width: 90%;
+    max-width: 800px;
+    background: linear-gradient(145deg, #1e1e1e, #232323);
+    border-radius: 10px;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    position: relative;
+}
+
+h1, h2 {
+    text-align: center;
+    color: #00FFAA;
+    text-shadow: 0 0 10px #00FFAA, 0 0 20px #00FFAA, 0 0 30px #00FFAA;
+}
+
+h1 {
+    margin-bottom: 20px;
+    font-size: 2.5em;
+}
+
+h2 {
+    margin-top: 30px;
+    font-size: 1.8em;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form input, form textarea {
+    margin-bottom: 10px;
+    padding: 15px;
+    font-size: 1em;
+    border: none;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.1);
+    color: #E0E0E0;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+form input::placeholder, form textarea::placeholder {
+    color: #999;
+}
+
+form button {
+    padding: 15px;
+    font-size: 1.2em;
+    background-color: #00FFAA;
+    color: #121212;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    text-shadow: 0 0 10px #121212;
+}
+
+form button:hover {
+    background-color: #00CC88;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    background: rgba(255, 255, 255, 0.1);
+    margin: 10px 0;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 255, 170, 0.5);
+    transition: background 0.3s;
+}
+
+ul li:hover {
+    background: rgba(0, 255, 170, 0.2);
+}
+
+.lang-switch {
+    text-align: right;
+    margin-bottom: 10px;
+    color: #00FFAA;
+}
+
+.lang-switch a {
+    color: #00FFAA;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.lang-switch a:hover {
+    color: #00CC88;
+}

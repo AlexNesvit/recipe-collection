@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Livre de recettes</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="lang-switch">
+            <a href="index-ru.html">Русский</a>
+        </div>
+        <h1>Mon livre de recettes</h1>
+        <form id="recipe-form">
+            <input type="text" id="title" placeholder="Nom de la recette" required>
+            <textarea id="ingredients" placeholder="Ingrédients" required></textarea>
+            <textarea id="instructions" placeholder="Instructions" required></textarea>
+            <button type="submit">Ajouter une recette</button>
+        </form>
+        <h2>Liste des recettes</h2>
+        <ul id="recipe-list"></ul>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>

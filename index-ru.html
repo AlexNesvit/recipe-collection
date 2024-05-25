@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Кулинарная книга</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="lang-switch">
+            <a href="index-fr.html">Français</a>
+        </div>
+        <h1>Моя кулинарная книга</h1>
+        <form id="recipe-form">
+            <input type="text" id="title" placeholder="Название рецепта" required>
+            <textarea id="ingredients" placeholder="Ингредиенты" required></textarea>
+            <textarea id="instructions" placeholder="Инструкции" required></textarea>
+            <button type="submit">Добавить рецепт</button>
+        </form>
+        <h2>Список рецептов</h2>
+        <ul id="recipe-list"></ul>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
+
+
