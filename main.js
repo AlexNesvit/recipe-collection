@@ -1,27 +1,12 @@
-
-document.getElementById('recipe-form').addEventListener('submit', function (e) {
-    e.preventDefault();
-
-    const title = document.getElementById('title').value;
-    const ingredients = document.getElementById('ingredients').value;
-    const instructions = document.getElementById('instructions').value;
-
-    const recipe = {
-        title,
-        ingredients,
-        instructions
-    };
-
-    addRecipeToList(recipe);
-
-    document.getElementById('recipe-form').reset();
+// Ожидаем загрузки документа
+document.addEventListener("DOMContentLoaded", function() {
+    // Плавное появление формы добавления рецепта
+    var recipeForm = document.getElementById('recipe-form');
+    if (recipeForm) {
+        recipeForm.style.opacity = '0';
+        setTimeout(function() {
+            recipeForm.style.transition = 'opacity 0.5s ease-in-out';
+            recipeForm.style.opacity = '1';
+        }, 500);
+    }
 });
-
-function addRecipeToList(recipe) {
-    const list = document.getElementById('recipe-list');
-
-    const li = document.createElement('li');
-    li.innerHTML = `<strong>${recipe.title}</strong><br>Ингредиенты: ${recipe.ingredients}<br>Инструкции: ${recipe.instructions}`;
-    
-    list.appendChild(li);
-}
