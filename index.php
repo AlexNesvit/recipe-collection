@@ -1,11 +1,11 @@
 <?php
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $title = $_POST['title'];
-    $ingredients = $_POST['ingredients'];
+    $ingredients = $_POST['ingridients'];
     $instructions = $_POST['instructions'];
 
     // Подключение к базе данных
-    $servername = "localhost:8888";
+    $servername = "localhost:8889";
     $username = "root";
     $password = "root";
     $dbname = "cusine";
@@ -16,9 +16,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         die("Connection failed: " . $conn->connect_error);
     }
 
-    $sql = "INSERT INTO recipes (title, ingredients, instructions) VALUES (?, ?, ?)";
+    $sql = "INSERT INTO recipes (title, ingridients, instructions) VALUES (?, ?, ?)";
     $stmt = $conn->prepare($sql);
-    $stmt->bind_param("sss", $title, $ingredients, $instructions);
+    $stmt->bind_param("sss", $title, $ingridients, $instructions);
 
     if ($stmt->execute()) {
         echo "Новый рецепт успешно добавлен";
@@ -29,4 +29,4 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $stmt->close();
     $conn->close();
 }
-?>
+
