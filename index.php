@@ -7,14 +7,14 @@ $texts = array(
     'ru' => array(
         'title' => "Добро пожаловать в мою кулинарную книгу",
         'placeholder_title' => "Название рецепта",
-        'placeholder_ingridients' => "Ингредиенты",
+        'placeholder_ingredients' => "Ингредиенты",
         'placeholder_instructions' => "Инструкции",
         'button_text' => "Добавить рецепт"
     ),
     'fr' => array(
         'title' => "Bienvenue sur mon livre de recettes",
         'placeholder_title' => "Nom de la recette",
-        'placeholder_ingridients' => "Ingrédients",
+        'placeholder_ingredients' => "Ingrédients",
         'placeholder_instructions' => "Instructions",
         'button_text' => "Ajouter une recette"
     )
@@ -23,7 +23,7 @@ $texts = array(
 // Установка текстовых строк для текущего языка
 $title = $texts[$lang]['title'];
 $placeholder_title = $texts[$lang]['placeholder_title'];
-$placeholder_ingridients = $texts[$lang]['placeholder_ingridients'];
+$placeholder_ingredients = $texts[$lang]['placeholder_ingredients'];
 $placeholder_instructions = $texts[$lang]['placeholder_instructions'];
 $button_text = $texts[$lang]['button_text'];
 ?>
@@ -47,12 +47,14 @@ $button_text = $texts[$lang]['button_text'];
         <h1><?php echo $title ?></h1>
         <form id="recipe-form" method="post" action="save-recipe.php">
             <input type="text" id="title" name="title" placeholder="<?php echo $placeholder_title ?>" required>
-            <textarea id="ingridients" name="ingridients" placeholder="<?php echo $placeholder_ingridients ?>" required></textarea>
+            <textarea id="ingredients" name="ingredients" placeholder="<?php echo $placeholder_ingredients ?>" required></textarea>
             <textarea id="instructions" name="instructions" placeholder="<?php echo $placeholder_instructions ?>" required></textarea>
             <button type="submit"><?php echo $button_text ?></button>
         </form>
         <h2>Список рецептов</h2>
         <ul id="recipe-list"></ul>
+        <a href="list-recipes.php"></a>
+
     </div>
     <script src="main.js"></script>
 </body>
