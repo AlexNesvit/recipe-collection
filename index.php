@@ -39,6 +39,8 @@ $button_text = $texts[$lang]['button_text'];
 </head>
 <body>
     <div class="container">
+        <!-- Динамический фон -->
+        <div class="dynamic-background"></div>            
         <div class="lang-switch">
             <a href="?lang=ru">Русский</a> | <a href="?lang=fr">Français</a>
         </div>
