@@ -36,6 +36,7 @@ $button_text = $texts[$lang]['button_text'];
     <title><?php echo $title ?></title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
     <div class="container">
@@ -53,8 +54,6 @@ $button_text = $texts[$lang]['button_text'];
         </form>
         <h2>Список рецептов</h2>
         <ul id="recipe-list"></ul>
-        <a href="list-recipes.php"></a>
-
     </div>
     <script src="main.js"></script>
 </body>

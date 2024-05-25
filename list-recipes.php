@@ -25,4 +25,4 @@ if ($result->num_rows > 0) {
 }
 $conn->close();
 ?>
-<a href="index.php">Добавить новый рецепт</a>
+
