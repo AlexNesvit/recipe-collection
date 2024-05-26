@@ -1,5 +1,4 @@
 <?php
-header('Content-Type: application/json');
 $servername = "localhost:8889";
 $username = "root";
 $password = "root";
@@ -10,8 +9,7 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 
 // Проверка соединения
 if ($conn->connect_error) {
-    echo json_encode(['status' => 'error', 'message' => 'Connection failed: ' . $conn->connect_error]);
-    exit();
+    die("Connection failed: " . $conn->connect_error);
 }
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -22,11 +20,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $sql = "INSERT INTO recipes (title, ingredients, instructions) VALUES ('$title', '$ingredients', '$instructions')";
 
     if ($conn->query($sql) === TRUE) {
-        echo json_encode(['status' => 'success', 'message' => 'Новый рецепт успешно добавлен!']);
+        echo "Новый рецепт успешно добавлен!";
     } else {
-        echo json_encode(['status' => 'error', 'message' => 'Ошибка: ' . $sql . '<br>' . $conn->error]);
+        echo "Ошибка: " . $sql . "<br>" . $conn->error;
     }
 }
 
 $conn->close();
 ?>
+<a href="list-recipes.php">Посмотреть все рецепты</a>
